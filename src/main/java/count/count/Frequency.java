@@ -17,7 +17,7 @@ class Frequency
 	void countFrequency(String str)
 	{
 		Map<String,Integer>mp=new HashMap<>();
-		String arr[]=str.split(" ");
+		String []arr=str.split(" ");
 		for(int i=0;i<arr.length;i++)
 		{
 			if(mp.containsKey(arr[i]))
@@ -29,7 +29,6 @@ class Frequency
                 mp.put(arr[i],1);
             }
 		}
-		Logger logger;
 		Logger l= Logger.getLogger("com.api.jar");
 		Queue<Map.Entry<String,Integer>> queue=new PriorityQueue<>((a,b)->{return b.getValue()-a.getValue();});
 		for(Map.Entry<String,Integer>e:mp.entrySet())
